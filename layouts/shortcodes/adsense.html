@@ -12,11 +12,11 @@
 
     {{- /* 根据传入的参数，选择对应的广告位ID */ -}}
     {{- if eq $adType "in-article" -}}
-        {{- $slot = "8277576073" -}} {{/* <--- 替换成你的文章内广告位ID */}}
+        {{- $slot = "1111" -}} {{/* <--- 替换成你的文章内广告位ID */}}
     {{- else if eq $adType "sidebar-square" -}}
-        {{- $slot = "8961453426" -}} {{/* <--- 替换成你的方形广告位ID */}}
+        {{- $slot = "2222" -}} {{/* <--- 替换成你的方形广告位ID */}}
     {{- else if eq $adType "another-type" -}}
-        {{- $slot = "3948799898" -}} {{/* <--- 你可以继续添加更多类型 */}}
+        {{- $slot = "3333" -}} {{/* <--- 你可以继续添加更多类型 */}}
     {{- end -}}
 
 
@@ -35,8 +35,10 @@
     </div>
     {{- end -}}
 
+    {{- with site.Params.wwgg -}}
+    <div class="wwads-cn wwads-vertical wwads-sticky" data-id="{{ . }}" style="max-width:180px"></div>
+    {{- end -}}
+
 {{- end -}}
 
-{{- with site.Params.wwgg -}}
-<div class="wwads-cn wwads-vertical wwads-sticky" data-id="{{ . }}" style="max-width:180px"></div>
-{{- end -}}
+
